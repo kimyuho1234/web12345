@@ -1,0 +1,418 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김유호 포트폴리오</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Markdown 렌더링 라이브러리 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><a href="#">YUHO</a></div>
+        <nav class="nav">
+            <button class="nav_btn active" data-page="home">Home</button>
+            <button class="nav_btn" data-page="about">About</button>
+            <button class="nav_btn" data-page="skills">Skills</button>
+            <button class="nav_btn" data-page="certifications">Certifications</button>
+            <button class="nav_btn" data-page="portfolio">Portfolio</button>
+            <button class="nav_btn" data-page="contact">Contact</button>
+            <button class="nav_btn" data-page="board">Board</button>
+            <button class="nav_btn" data-page="login" id="ProfileNavBtn">Login</button>
+            <button class="nav_btn" data-page="admin" id="adminNavBtn">Admin</button>
+        </nav>
+        <div id="header-auth-area" class="auth-nav"></div>
+        <button id="themebtn">dark모드</button>
+    </header>
+    <main class="main">
+        <section class="page active" id="home">
+            <p class="small_title">PORTFOLIO</p>
+            <h1>
+                안녕하세요,<br>
+                <span class="name" id="myName" style="cursor:pointer;"><img src="./click.png" alt="">김유호</span>
+                입니다
+            </h1>
+            <div id="myInfo" class="card" style="display:none; margin-top:20px;">
+                <p><a href="#" class="myinfo_a">나이</a> 18세</p>
+                <p><a href="#" class="myinfo_a">번호</a> 010-1234-5678</p>
+                <p><a href="#" class="myinfo_a">소속</a> 서울디지텍고등학교</p>
+            </div>
+            <p id="typing" class="typing_text"></p>
+        </section>
+        <section class="page" id="about">
+            <h2>About</h2>
+            <div class="card">
+                <div class="about_row">
+                    <span class="about_li">음식▶</span>
+                    <div class="about_btn">
+                        <a href="https://namu.wiki/w/%EC%97%B0%EC%96%B4" target="_blank" class="about_a">연어</a>
+                        <a href="https://namu.wiki/w/%ED%96%84%EB%B2%84%EA%B1%B0" target="_blank" class="about_a">햄버거</a>
+                    </div>
+                </div>
+                <div class="about_row">
+                    <span class="about_li">야구팀▶</span>
+                    <div class="about_btn">
+                        <a href="https://www.samsunglions.com/index.asp" target="_blank" class="about_a">
+                            <img src="./images/삼성.svg" alt="logo" class="about_logo">
+                            삼성 라이온즈
+                        </a>
+                    </div>
+                </div>
+                <div class="about_row">
+                    <span class="about_li">아이돌▶</span>
+                    <div class="about_btn">
+                        <a href="https://www.youtube.com/@QWER_Band_official" target="_blank" class="about_a">
+                            <img src="./images/QWER.png" alt="logo" class="about_logo">
+                            QWER
+                        </a>
+                        <a href="https://www.youtube.com/@hearts2hearts.official" target="_blank" class="about_a">
+                            <img src="./images/하츠투하츠.png" alt="logo" class="about_logo">
+                            Hearts2Hearts
+                        </a>
+                        <a href="https://www.youtube.com/@fromis9_official" target="_blank" class="about_a">
+                            <img src="./images/프로미스나인.jpg" alt="logo" class="about_logo">
+                            fromis_9
+                        </a>
+                    </div>
+                </div>
+                <div class="about_row">
+                    <span class="about_li">게임▶</span>
+                    <div class="about_btn">
+                        <a href="https://playvalorant.com/ko-kr/" target="_blank" class="about_a">
+                            <img src="./images/발로.png" alt="logo" class="about_logo">
+                            발로란트
+                        </a>
+                        <a href="https://www.ubisoft.com/ko-kr/game/rainbow-six/siege" target="_blank" class="about_a">
+                            <img src="./images/레식.webp" alt="logo" class="about_logo">
+                            레인보우식스 시즈X
+                        </a>
+                        <!-- <a href="https://www.fortnite.com/" target="_blank" class="about_a">포트나이트</a> -->
+                        <!-- <a href="https://pubg.com/ko/main" target="_blank" class="about_a">배틀그라운드</a> -->
+                        <a href="https://www.playdeltaforce.com/ko/" target="_blank" class="about_a">
+                            <img src="./images/델타포스.png" alt="logo" class="about_logo">
+                            델타포스
+                        </a>
+                    </div>
+                </div>
+                <div class="about_row">
+                    <span class="about_li">노래▶</span>
+                    <div class="about_btn">
+                        <a href="https://www.youtube.com/watch?v=F7sGJVUrkjQ" target="_blank"
+                            class="about_a">Hearts2Hearts - RUDE!</a>
+                        <!-- <a href="https://www.youtube.com/watch?v=PRH8JkIe0Ho" target="_blank" class="about_a">QWER -
+                            행복해져라</a> -->
+                        <a href="https://www.youtube.com/watch?v=NOiyDlWl534" target="_blank" class="about_a">YENA -
+                            캐치 캐치</a>
+                        <a href="https://www.youtube.com/watch?v=A8d2Gx91zwk" target="_blank" class="about_a">QWER -
+                            CEREMONY</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page" id="skills">
+            <h2>Skills</h2>
+            <div class="card">
+                <div class="skill_item">
+                    <div class="skill_top">
+                        <span><a href="https://namu.wiki/w/HTML" target="_blank" class="about_link">HTML</a></span>
+                        <span>80%</span>
+                    </div>
+                    <div class="bar">
+                        <div class="fill html"></div>
+                    </div>
+                </div>
+                <div class="skill_item">
+                    <div class="skill_top">
+                        <span><a href="https://namu.wiki/w/CSS" target="_blank" class="about_link">CSS</a></span>
+                        <span>70%</span>
+                    </div>
+                    <div class="bar">
+                        <div class="fill css"></div>
+                    </div>
+                </div>
+                <div class="skill_item">
+                    <div class="skill_top">
+                        <span><a href="https://namu.wiki/w/JavaScript" target="_blank" class="about_link">JavaScript</a></span>
+                        <span>20%</span>
+                    </div>
+                    <div class="bar">
+                        <div class="fill js"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill_top">
+                        <span><a href="https://namu.wiki/w/AutoCAD" target="_blank" class="about_link">Auto CAD</a></span>
+                        <span>95%</span>
+                    </div>
+                    <div class="bar">
+                        <div class="fill cad"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page" id="certifications">
+            <h2>Certifications</h2>
+            <div class="card">
+                <div class="cert_list">
+                    <div class="cert_item">
+                        <div>
+                            <strong class="cert_label">지도제작기능사</strong>
+                        </div>
+                        <a class="cert_a">지도 제작 및 지리 정보 처리</a>
+                    </div>
+                    <div class="cert_item">
+                        <div>
+                            <strong class="cert_label">ITQ 아래한글</strong>
+                        </div>
+                        <a class="cert_a">한글 문서 작성 및 편집</a>
+                    </div>
+                    <div class="cert_item">
+                        <div>
+                            <strong class="cert_label">ITQ 한글엑셀</strong>
+                        </div>
+                        <a class="cert_a">스프레드시트 및 데이터 분석</a>
+                    </div>
+
+                    <div class="cert_item">
+                        <div>
+                            <strong class="cert_label">ITQ 인터넷</strong>
+                        </div>
+                        <a class="cert_a">인터넷 정보 검색 및 보안</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page" id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio_wrap">
+                <div class="portfolio_card">
+                    <h3>자기소개 웹페이지</h3>
+                    <p>HTML, CSS, JavaScript로 만든 포트폴리오 웹페이지입니다.</p>
+                </div>
+                <div class="portfolio_card">
+                    <h3>추가 예정</h3>
+                    <p>앞으로 다양한 프로젝트를 통해 이 공간을 계속 채워나갈 예정입니다.</p>
+                </div>
+            </div>
+        </section>
+        <section class="page" id="contact">
+            <h2>Contact</h2>
+            <div class="card contact_card">
+                <div class="contact_info">
+                    <p>
+                        Instagram: <a href="https://www.instagram.com/k_yuho123/?next=%2Fk_yuho123%2F" target="_blank" class="about_link">k_yuho123</a>
+                    </p>
+                    <p>
+                        Github: <a href="https://github.com/kimyuho1234" target="_blank" class="about_link">kimyuho1234</a>
+                    </p>
+                    <p>Email: sdh250108@sdh.hs.kr</p>
+                </div>
+                <form id="contactForm" class="contact_form">
+                    <h3>문의하기</h3>
+                    <div class="form_group">
+                        <label for="contact-name">이름</label>
+                        <input type="text" id="contact-name" name="name" placeholder="이름을 입력하세요" required>
+                    </div>
+                    <div class="form_group">
+                        <label for="contact-email">이메일</label>
+                        <input type="email" id="contact-email" name="email" placeholder="example@domain.com" required>
+                    </div>
+                    <div class="form_group">
+                        <label for="contact-message">문의 내용</label>
+                        <textarea id="contact-message" name="message" placeholder="문의 내용을 입력하세요" required></textarea>
+                    </div>
+                    <button type="submit" class="submit_btn">보내기</button>
+                    <p id="contactStatus" class="status_text"></p>
+                </form>
+            </div>
+        </section>
+        <section class="page" id="board">
+            <div class="board_shell">
+                <div class="board_topbar">
+                    <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+                            <div style="display:flex; gap:10px; align-items:center;">
+                                <button class="small_btn" id="tabPosts" style="font-size:1.05rem; padding:8px 14px;">Posts</button>
+                                <button class="small_btn" id="tabInquiry" style="font-size:1.05rem; padding:8px 14px;">Inquiry</button>
+                            </div>
+                            <div style="display:flex; align-items:center; gap:10px;">
+                                <h2 class="board_page_title" id="boardPageTitle">POSTS</h2>
+                                <button class="write_btn" id="openWriteBtn">🖊️ 글쓰기</button>
+                            </div>
+                    </div>
+                    <!-- <div style="display:flex; gap:8px; margin-top:8px; align-items:center;">
+                        <button class="small_btn" id="tabPosts" style="font-size:1.05rem; padding:8px 14px;">Posts</button>
+                        <button class="small_btn" id="tabInquiry" style="font-size:1.05rem; padding:8px 14px;">Inquiry</button>
+                    </div> -->
+                </div>
+                <!-- 게시글이 없을 때 -->
+                <div id="boardEmptyState" class="board_empty_state">
+                    <div class="empty_icon">📝</div>
+                    <p>아직 작성된 글이 없어요.</p>
+                    <p>첫 번째 글을 남겨보세요!</p>
+                </div>
+                <!-- 문의 목록: board 내에서 조회할 수 있는 영역 -->
+                <div id="inquiryListWrap" class="board_list_wrap hidden">
+                    <div id="inquiryList" class="post_grid">
+                        <!-- 문의(문의자, 이메일, 내용, 시간)가 렌더링됩니다 -->
+                    </div>
+                </div>
+                <!-- 게시글 목록 -->
+                <div id="boardListWrap" class="board_list_wrap hidden">
+                    <div id="postList" class="post_grid">
+                        <!-- 자바스크립트에서 수정/삭제 버튼이 포함된 카드가 생성될 곳입니다 -->
+                    </div>
+                </div>
+                <!-- 글 작성 창 -->
+                <div id="boardWriteWrap" class="board_write_wrap hidden">
+                    <div class="card board_write_card">
+                        <div class="board_write_top"
+                            style="display: flex; justify-content: space-between; align-items: center;">
+                            <h3 id="postFormTitle">새 글 작성</h3>
+                            <!-- 닫기 버튼 추가 -->
+                            <button id="closeWriteBtn"
+                                style="background:none; border:none; font-size:1.5rem; cursor:pointer;">&times;</button>
+                        </div>
+                        <form id="postForm">
+                            <!-- 작성자 입력란 및 익명 체크박스 추가 -->
+                            <div style="display: flex; gap: 10px; margin-bottom: 10px; align-items: center;">
+                                <input type="text" id="author" placeholder="작성자 이름" style="flex: 1;">
+                                <label style="font-size: 0.9rem; white-space: nowrap;">
+                                    <input type="checkbox" id="isAnonymous">익명
+                                </label>
+                            </div>
+                            <input type="text" id="title" placeholder="제목을 입력하세요" required>
+                            <textarea id="content" placeholder="내용을 입력하세요" required></textarea>
+                            <div class="markdown_help">
+                                <span data-tip="줄 맨 앞에 #을 쓰고 한 칸 띄운 뒤 제목을 적어요. 예: # 오늘의 기록"># 제목</span>
+                                <span data-tip="줄 맨 앞에 ##을 쓰면 조금 작은 제목이 돼요. 예: ## 준비물">## 작은 제목</span>
+                                <span data-tip="굵게 만들 글자를 **두 개**로 감싸요. 예: **중요**">**굵게**</span>
+                                <span data-tip="기울일 글자를 *별표 한 개*로 감싸요. 예: *강조*">*기울임*</span>
+                                <span data-tip="취소선은 물결표 2개로 감싸요. 예: ~~수정 전 내용~~">~~취소선~~</span>
+                                <span data-tip="줄 맨 앞에 - 를 쓰고 한 칸 띄우면 목록이 돼요. 예: - 할 일">- 목록</span>
+                                <span data-tip="줄 맨 앞에 1. 을 쓰고 한 칸 띄우면 번호 목록이 돼요. 예: 1. 첫 번째">1. 번호 목록</span>
+                                <span data-tip="줄 맨 앞에 > 를 쓰고 한 칸 띄우면 인용문이 돼요. 예: > 기억할 말">&gt; 인용문</span>
+                                <span data-tip="대괄호에는 보일 글자, 괄호에는 주소를 넣어요. 예: [네이버](https://naver.com)">[링크](주소)</span>
+                                <span data-tip="이미지 주소를 괄호에 넣으면 이미지가 보여요. 예: ![사진](https://example.com/a.png)">![이미지](주소)</span>
+                                <span data-tip="짧은 코드는 `기호로 감싸요. 예: `console.log()`">`코드`</span>
+                                <span data-tip="여러 줄 코드는 위아래를 ```로 감싸요. 예: ``` 엔터 코드 엔터 ```">```코드블록```</span>
+                                <span data-tip="표는 제목 줄, 구분선, 내용 줄을 써요. 예: |이름|나이| 다음 줄 |---|---|">| 표 | 만들기 |</span>
+                                <span data-tip="줄에 ---만 쓰면 가로 구분선이 생겨요.">---</span>
+                            </div>
+                            <div class="markdown_preview_box">
+                                <div class="markdown_preview_title">미리보기</div>
+                                <div id="markdownPreview" class="post_content markdown_preview"></div>
+                            </div>
+                            <button type="submit" class="board_submit" id="postSubmitBtn">등록</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page" id="login">
+            <div class="auth-wrapper">
+                <div class="auth-card">
+                    <h2 class="auth-title">Welcome Back</h2>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="login-email" class="form-control" autocomplete="off" placeholder="이메일을 입력하세요">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <div class="password_field">
+                            <input type="password" id="login-password" class="form-control" autocomplete="new-password" placeholder="비밀번호를 입력하세요"
+                                onkeyup="if(event.key==='Enter') handleLogin()">
+                            <button type="button" class="password_toggle" data-target="login-password" aria-label="비밀번호 보기">👁️</button>
+                        </div>
+                        <div id="login-error" class="error-msg">이메일 또는 비밀번호가 일치하지 않습니다.</div>
+                    </div>
+                    <button class="btn btn-full" onclick="handleLogin()">Login</button>
+                    <div class="social-login">
+                        <button type="button" class="social-btn google" onclick="handleSocialLogin('Google')" aria-label="Google 로그인"><span class="social-logo google-logo">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M21.6 12.23c0-.74-.07-1.45-.19-2.12H12v4.01h5.38a4.6 4.6 0 0 1-1.99 3.02v2.51h3.22c1.88-1.73 2.99-4.28 2.99-7.42Z"/><path fill="#34A853" d="M12 22c2.7 0 4.96-.89 6.61-2.35l-3.22-2.51c-.89.6-2.04.96-3.39.96-2.6 0-4.8-1.76-5.59-4.12H3.08v2.59A9.99 9.99 0 0 0 12 22Z"/><path fill="#FBBC05" d="M6.41 13.98A6.01 6.01 0 0 1 6.1 12c0-.69.11-1.36.31-1.98V7.43H3.08A9.99 9.99 0 0 0 2 12c0 1.61.39 3.13 1.08 4.57l3.33-2.59Z"/><path fill="#EA4335" d="M12 5.9c1.47 0 2.79.51 3.83 1.5l2.86-2.86C16.96 2.92 14.7 2 12 2a9.99 9.99 0 0 0-8.92 5.43l3.33 2.59C7.2 7.66 9.4 5.9 12 5.9Z"/></svg>
+                        </span></button>
+                        <button type="button" class="social-btn github" onclick="handleSocialLogin('GitHub')" aria-label="GitHub 로그인"><span class="social-logo github-logo">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49 0-.24-.01-1.05-.01-1.9-2.78.62-3.37-1.22-3.37-1.22-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.93.85.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05A9.3 9.3 0 0 1 12 6.95c.85 0 1.7.12 2.5.34 1.9-1.33 2.74-1.05 2.74-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.06 10.06 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg>
+                        </span></button>
+                        <button type="button" class="social-btn kakao" onclick="handleSocialLogin('Kakao')" aria-label="Kakao 로그인"><span class="social-logo kakao-logo">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4C6.48 4 2 7.47 2 11.74c0 2.74 1.85 5.15 4.63 6.52l-.82 3.01c-.07.27.23.49.46.34l3.58-2.36c.69.13 1.41.2 2.15.2 5.52 0 10-3.47 10-7.71C22 7.47 17.52 4 12 4Z"/></svg>
+                        </span></button>
+                    </div>
+                    <div class="auth-footer">
+                        계정이 없으신가요?
+                        <a onclick="goRegister()">회원가입 (Sign up)</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page" id="signup">
+            <div class="auth-wrapper">
+                <div class="auth-card">
+                    <h2 class="auth-title">Create Account</h2>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" id="signup-name" class="form-control" placeholder="이름을 입력하세요">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="signup-email" class="form-control" placeholder="사용할 이메일을 입력하세요">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <div class="password_field">
+                            <input type="password" id="signup-password" class="form-control" placeholder="비밀번호 입력">
+                            <button type="button" class="password_toggle" data-target="signup-password" aria-label="비밀번호 보기">👁️</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <div class="password_field">
+                            <input type="password" id="signup-password-confirm" class="form-control" placeholder="비밀번호 재입력"
+                                onkeyup="if(event.key==='Enter') handleSignup()">
+                            <button type="button" class="password_toggle" data-target="signup-password-confirm" aria-label="비밀번호 보기">👁️</button>
+                        </div>
+                        <div id="signup-error" class="error-msg">비밀번호가 일치하지 않습니다.</div>
+                    </div>
+                    <button class="btn btn-full" onclick="handleSignup()">Sign Up</button>
+                    <div class="social-login">
+                        <button type="button" class="social-btn google" onclick="handleSocialLogin('Google')" aria-label="Google 회원가입"><span class="social-logo google-logo">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M21.6 12.23c0-.74-.07-1.45-.19-2.12H12v4.01h5.38a4.6 4.6 0 0 1-1.99 3.02v2.51h3.22c1.88-1.73 2.99-4.28 2.99-7.42Z"/><path fill="#34A853" d="M12 22c2.7 0 4.96-.89 6.61-2.35l-3.22-2.51c-.89.6-2.04.96-3.39.96-2.6 0-4.8-1.76-5.59-4.12H3.08v2.59A9.99 9.99 0 0 0 12 22Z"/><path fill="#FBBC05" d="M6.41 13.98A6.01 6.01 0 0 1 6.1 12c0-.69.11-1.36.31-1.98V7.43H3.08A9.99 9.99 0 0 0 2 12c0 1.61.39 3.13 1.08 4.57l3.33-2.59Z"/><path fill="#EA4335" d="M12 5.9c1.47 0 2.79.51 3.83 1.5l2.86-2.86C16.96 2.92 14.7 2 12 2a9.99 9.99 0 0 0-8.92 5.43l3.33 2.59C7.2 7.66 9.4 5.9 12 5.9Z"/></svg>
+                        </span></button>
+                        <button type="button" class="social-btn github" onclick="handleSocialLogin('GitHub')" aria-label="GitHub 회원가입"><span class="social-logo github-logo">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49 0-.24-.01-1.05-.01-1.9-2.78.62-3.37-1.22-3.37-1.22-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.93.85.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05A9.3 9.3 0 0 1 12 6.95c.85 0 1.7.12 2.5.34 1.9-1.33 2.74-1.05 2.74-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.06 10.06 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg>
+                        </span></button>
+                        <button type="button" class="social-btn kakao" onclick="handleSocialLogin('Kakao')" aria-label="Kakao 회원가입"><span class="social-logo kakao-logo">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4C6.48 4 2 7.47 2 11.74c0 2.74 1.85 5.15 4.63 6.52l-.82 3.01c-.07.27.23.49.46.34l3.58-2.36c.69.13 1.41.2 2.15.2 5.52 0 10-3.47 10-7.71C22 7.47 17.52 4 12 4Z"/></svg>
+                        </span></button>
+                    </div>
+                    <div class="auth-footer">
+                        이미 계정이 있으신가요?
+                        <a onclick="goLogin()">로그인 (Login)</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page" id="admin">
+            <h2>Admin</h2>
+            <div class="card board_card board_form_card">
+                <form id="noticeForm">
+                    <input type="text" id="noticeTitle" placeholder="공지 제목을 입력하세요">
+                    <textarea id="noticeContent" placeholder="공지 내용을 입력하세요"></textarea>
+                    <label class="secret_label">
+                        <input type="checkbox" id="noticePinned" checked>
+                        상단 고정
+                    </label>
+                    <button type="submit" class="board_submit">공지 등록</button>
+                </form>
+            </div>
+            <div class="card board_card board_list_card">
+                <h3>관리자 기록</h3>
+                <div id="adminPanel"></div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

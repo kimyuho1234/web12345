@@ -1,0 +1,9 @@
+﻿{
+  "version": 2,
+  "rewrites": [
+    { "source": "/api/auth1", "destination": "/api/auth1.js" },
+    { "source": "/api/admin", "destination": "/api/admin.js" },
+    { "source": "/api/(.*)", "destination": "/api/posts.js" }
+  ],
+  "cleanUrls": true
+}
